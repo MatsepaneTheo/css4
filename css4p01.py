@@ -5,7 +5,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# Load the movie csv file
+# Load the movie csv file using pandas
 df=pd.read_csv("movie_dataset.csv")
 
 # Fill NAN cells in the columns with average of the column in csv file
