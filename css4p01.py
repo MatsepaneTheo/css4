@@ -80,6 +80,10 @@ print("Percentage increase from 2006 to 2016 is", int(perc_in), "%")
 
 x = df['Rating']
 y = df['Revenue (Millions)']
+z = df['Runtime (Minutes)']
+m = df['Metascore']
+v = df['Votes']
+
 
 plt.scatter(x, y)
 plt.title('Revenue as a function of rating')
@@ -88,3 +92,30 @@ plt.ylabel('Revenue [Millions]')
 plt.savefig("rating_revenue.png")
 plt.show()
 
+plt.scatter(z, x)
+plt.title('Rating as a function of runtime')
+plt.xlabel('Runtime [minutes]')
+plt.ylabel('Rating')
+plt.savefig("rating_runtime.png")
+plt.show()
+
+plt.scatter(z, y)
+plt.title('Revenue as a function of runtime')
+plt.xlabel('Runtime [minutes]')
+plt.ylabel('Revenue')
+plt.savefig("revenue_runtime.png")
+plt.show()
+
+plt.scatter(m, x)
+plt.title('Metascore as a function of rating')
+plt.xlabel('Metascore')
+plt.ylabel('Rating')
+plt.savefig("metascore_rating.png")
+plt.show()
+
+plt.scatter(m, v)
+plt.title('Votes as a function of Metascore')
+plt.xlabel('Metascore')
+plt.ylabel('Votes')
+plt.savefig("metascore_votes.png")
+plt.show()
